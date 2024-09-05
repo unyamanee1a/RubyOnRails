@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="formframe">
+        <div class="formlayout">
+            <div class="header">Register Form</div>
+
+            <%= form_with model: @register, url: new_register_form_path, method: :post, local: true do |f| %>
+                <div class="userName">
+                    <div class="firstName">
+                        <%= f.label :first_name, "First Name" %>
+                        <%= f.text_field :first_name %>
+                    </div>
+                    <div class="lastName">
+                        <%= f.label :last_name, "Last Name" %>
+                        <%= f.text_field :last_name %>
+                    </div>
+                </div>
+
+                <div class="birthDateAndGender">
+                    <div class="birthDate">
+                        <%= f.label :birthdate, "Birthday" %>
+                        <%= f.date_field :birthdate %>
+                    </div>
+                    <div class="gender">
+                        <%= f.label :gender, "Gender" %>
+                        <div class="option">
+                            <div class="genderOption">
+                                <%= f.radio_button :gender, 'Male' %>
+                                <%= f.label :gender_male, "Male" %>
+                            </div>
+                            <div class="genderOption">
+                                <%= f.radio_button :gender, 'Female' %>
+                                <%= f.label :gender_female, "Female" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <div class="mail">
+                        <%= f.label :email, "Email" %>
+                        <%= f.email_field :email %>
+                    </div>
+                    <div class="phoneNumber">
+                        <%= f.label :phone_number, "Phone Number" %>
+                        <%= f.text_field :phone_number %>
+                    </div>
+                </div>
+
+                <div class="subject">
+                    <%= f.label :subject, "Subject" %>
+                    <%= f.select :subject, [['Ruby On Rails', 'ruby'], ['Javascript', 'javascript'], ['Typescript', 'typescript']], prompt: "Choose your option" %>
+                </div>
+
+                <div class="submit">
+                    <%= f.submit "Submit" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</body>
+</html>
