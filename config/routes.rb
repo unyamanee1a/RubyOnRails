@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :register_form, only: [:new, :create]
+  get "register_form/new" , to: "register_form#new", as: :registerForm_new
+  post "register_form" , to: "register_form#create"
+  get "register_form" , to: "register_form#index", as: :registerForm
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "register_form#index"
 end
