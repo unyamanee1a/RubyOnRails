@@ -7,32 +7,32 @@
   <title>Register Form</title>
 </head>
 <body>
-      <%= form_with model: @register, url: new_register_form_path, method: :post, local: true do |f| %>
+      <%= form_with model: @register, url: register_form_path, method: :post, local: true do |f| %>
             <section class="frame">
                 <section class="form">
                 <div class="header">Register Form</div>
                     <div class="groupform">
                         <div class="formfield">
-                            <%= f.label :first_name, 'First Name', for: 'firstName' %>
-                            <%= f.text_field :first_name, id: 'firstName', required: true %>
+                            <%= f.label :fristName, 'First Name', for: 'firstName' %>
+                            <%= f.text_field :fristName, id: 'firstName', required: true %>
                         </div>
                         <div class="formfield">
-                            <%= f.label :last_name, 'Last Name', for: 'lastName' %>
-                            <%= f.text_field :last_name, id: 'lastName', required: true %>
+                            <%= f.label :lastName, 'Last Name', for: 'lastName' %>
+                            <%= f.text_field :lastName, id: 'lastName', required: true %>
                         </div>
                     </div>
                     <div class="groupform">
                         <div class="formfield">
-                            <%= f.label :birth_date, 'Birthday', for: 'birthDate' %>
-                            <%= f.date_field :birth_date, id: 'birthDate', required: true %>
+                            <%= f.label :birthDate, 'Birthday', for: 'birthDate' %>
+                            <%= f.date_field :birthDate, id: 'birthDate', required: true %>
                         </div>
                         <div class="formfield">
                             <%= f.label :gender, 'Gender' %>
                             <div class="option">
                             <%= f.radio_button :gender, 'Male', id: 'male' %>
-                            <%= f.label :gender_male, 'Male', value: 'Male', for: 'male' %>
+                            <%= f.label :gender, 'Male', value: 'Male', for: 'male' %>
                             <%= f.radio_button :gender, 'Female', id: 'female' %>
-                            <%= f.label :gender_female, 'Female', value: 'Female', for: 'female' %>
+                            <%= f.label :gender, 'Female', value: 'Female', for: 'female' %>
                             </div>
                         </div>
                     </div>
@@ -42,8 +42,8 @@
                             <%= f.email_field :email, id: 'email', required: true %>
                         </div>
                         <div class="formfield">
-                            <%= f.label :phone_number, 'Phone Number', for: 'phoneNumber' %>
-                            <%= f.text_field :phone_number, id: 'phoneNumber' %>
+                            <%= f.label :phoneNumber, 'Phone Number', for: 'phoneNumber' %>
+                            <%= f.text_field :phoneNumber, id: 'phoneNumber' %>
                         </div>
                     </div>
                     <div class="formfield">
