@@ -4,11 +4,21 @@ class RegisterFormController < ApplicationController
   end
 
   def create
-    @register = RegisterForm.new(userData)
+    @register = RegisterForm.new(register_params)
     if @register.save
       redirect_to root_path
     else
         render :new
-    end 
+    end
+  end
+
+  def index
+    @register = RegisterForm.all
+  end
+
+  private
+
+  def register_params
+    params.require(:register_form).permit(:fristName, :lastName, :birthDate, :gender, :email, :phoneNumber, :subject)
   end
 end
