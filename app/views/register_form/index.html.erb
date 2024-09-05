@@ -1,0 +1,28 @@
+<%=button_to "regis" , registerForm_new_path, method: :get%>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Birth Date</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Subject</th>
+    </tr>
+  </thead>
+<tbody>
+<% @register.each do |user| %>
+<tr>
+        <td><%= user.fristName %></td>
+        <td><%= user.lastName %></td>
+        <td><%= user.birthDate %></td>
+        <td><%= user.gender %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phoneNumber %></td>
+        <td><%= user.subject %></td>
+</tr>
+
+
+<%end%>
