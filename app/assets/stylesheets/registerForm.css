@@ -1,0 +1,157 @@
+body{
+    background-image: linear-gradient(to bottom right, rgb(176, 48, 255), rgb(231, 206, 255));    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    font-family: "Inter", sans-serif;
+}
+
+.formframe{
+    background-color: white;
+    border-radius: 30px;
+    margin: auto;
+    width:50%;
+}
+
+.formlayout{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    align-items: start;
+    width: 100%;
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+label{
+     font-size: 18px;
+     font-weight: 500;
+}
+
+input{
+    border: 1px solid;
+    border-color: rgb(226, 226, 226);
+    background-color: rgb(246, 246, 246);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+select{
+    border: 1px solid;
+    border-color: rgb(226, 226, 226);
+    background-color: rgb(246, 246, 246);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.userName{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    width: 100%;
+}
+.firstName{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 10px;
+}
+
+.lastName{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+ }
+
+.birthDateAndGender{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    justify-content: start;
+}
+
+.birthDate{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.gender{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+}
+
+.genderOption{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.mail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.phoneNumeber{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.subject{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+}
+input[type='radio'] {
+    margin: 0.5rem;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.submit{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+button{
+    font-size: 18px;
+    background-color: rgb(0, 98, 255);
+    border: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%;
+    color: #ffff;
+}
