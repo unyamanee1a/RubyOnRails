@@ -6,7 +6,7 @@ class RegisterFormController < ApplicationController
   def create
     @register = RegisterForm.new(register_params)
     if @register.save
-      redirect_to root_path
+      redirect_to register_form_path
     else
         render :new
     end

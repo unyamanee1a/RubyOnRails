@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get "register_form" , to: "register_form#index", as: :registerForm
 
   # Defines the root path route ("/")
-  root "register_form#index"
+  root "register_form#new"
 end
